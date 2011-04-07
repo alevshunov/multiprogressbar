@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Progressbar demo</title>
+
+    <script type="text/javascript" src="js\jquery-1.5.2.js"></script>
+    <script type="text/javascript" src="js\jquery.corner.js"></script>    
+    <script type="text/javascript" src="js\jquery.progress.js"></script>         
+    <link type="text/css" rel="Stylesheet" href="css\jquery.progress.css"  />
+
+    <style type="text/css">
+        #container0 { width:50px; }
+        #container1 { width:100px; }
+        #container2 { width:120px; }
+        #container3 { width:140px; }
+        #container4 { width:150px; }
+        #container5 { width:180px; }
+    </style>
+</head>
+<body>
+    <div id="container0"></div>
+    <div id="container1"></div>
+    <div id="container2"></div>
+    <div id="container3"></div>
+    <div id="container4"></div>
+    <div id="container5"></div>
+
+    <script type="text/javascript">
+        function DoProgress()
+        {
+            for (var i = 0; i <= 5; i++)
+            {
+                var completed = Math.round(Math.random() * 100);
+                var free = (100 - completed);
+                var inProgress = Math.round(Math.random() * free);
+                
+                $("#container" + i).progress(
+                { 
+                    Completed: completed,
+                    InProgress: inProgress
+                });
+            }
+        }            
+
+        function Init() {
+            DoProgress();
+        }
+
+        $(document).ready(Init);
+    </script>
+</body>
+</html>

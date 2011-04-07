@@ -1,0 +1,28 @@
+.progress
+{
+    background-color: #f5f5f5;
+    border: solid 1px #636564;
+    height:10px;
+    font-family:Verdana;
+    font-size:6pt;
+    color: #85847a;
+    vertical-align:middle;
+    position:relative;
+}
+
+.progress > .scale
+{
+    float: left;
+    height:inherit;
+    overflow:hidden;
+}
+        
+.progress > .complete
+{
+    background-color:#86d603;        
+}        
+        
+.progress > .inprogress
+{
+    background-color:#dfd842;        
+}
